@@ -1,0 +1,39 @@
+If GetAsyncKeyState(GM_LEFT) And GetAsyncKeyState(GM_UP) Then
+Char.OldX = Char.x
+Char.OldY = Char.y
+Char.x = Char.x - Char.Movement / 2
+Char.y = Char.y - Char.Movement / 2
+Char.Direction = 3
+Char.Moved = True
+GoTo Moved
+End If
+
+If GetAsyncKeyState(GM_UP) And GetAsyncKeyState(GM_RIGHT) Then
+Char.OldX = Char.x
+Char.OldY = Char.y
+Char.x = Char.x + Char.Movement / 2
+Char.y = Char.y - Char.Movement / 2
+Char.Direction = 1
+Char.Moved = True
+GoTo Moved
+End If
+
+If GetAsyncKeyState(GM_RIGHT) And GetAsyncKeyState(GM_DOWN) Then
+Char.OldX = Char.x
+Char.OldY = Char.y
+Char.x = Char.x + Char.Movement / 2
+Char.y = Char.y + Char.Movement / 2
+Char.Direction = 1
+Char.Moved = True
+GoTo Moved
+End If
+
+If GetAsyncKeyState(GM_DOWN) And GetAsyncKeyState(GM_LEFT) Then
+Char.OldX = Char.x
+Char.OldY = Char.y
+Char.x = Char.x - Char.Movement / 2
+Char.y = Char.y + Char.Movement / 2
+Char.Direction = 3
+Char.Moved = True
+GoTo Moved
+End If
